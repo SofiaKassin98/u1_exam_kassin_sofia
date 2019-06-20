@@ -208,10 +208,12 @@ Solid {
                 jointParameters HingeJointParameters {
                   axis 0 0 1
                   anchor -0.108 0.85 -0.118
+                  springConstant 0.2
+                  dampingConstant 1
                 }
                 endPoint Solid {
                   translation -8.240945559429003e-07 -1.609746402342349e-05 -9.083233308559979e-07
-                  rotation 0.7393790489102685 -0.010484829009624714 -0.6732077616851918 2.5101270305212674e-06
+                  rotation 0.7393790489102683 -0.01048482900962471 -0.6732077616851916 2.5101270305212674e-06
                   children [
                     Group {
                       children [
