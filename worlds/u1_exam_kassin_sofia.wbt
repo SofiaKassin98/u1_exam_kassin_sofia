@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.029126307243604772 0.991165639452282 0.129392168988313 2.655224558159153
-  position 0.9827153998207935 0.8791481460176379 -2.598242093636871
+  orientation -0.04298077351592879 0.9936604434124366 0.10388251202860022 2.3020956448341123
+  position 1.3922138341485508 0.6312057594215605 -1.957235793895279
 }
 TexturedBackground {
 }
@@ -17,8 +17,9 @@ Solid {
       children [
         Group {
           children [
-            Transform {
+            DEF ONE Transform {
               translation 0.3 0.3 0
+              rotation 0 0 1 0.2617996938995747
               children [
                 Shape {
                   appearance DEF BLUE PBRAppearance {
@@ -33,8 +34,9 @@ Solid {
                 }
               ]
             }
-            Transform {
+            DEF ONE_FRONT Transform {
               translation -0.3 0.3 0
+              rotation 0 0 1 -0.262
               children [
                 Shape {
                   appearance DEF BLUE PBRAppearance {
@@ -49,8 +51,9 @@ Solid {
                 }
               ]
             }
-            Transform {
+            DEF TWO Transform {
               translation 0 0.3 0.3
+              rotation 1 0 0 -0.262
               children [
                 Shape {
                   appearance DEF BLUE PBRAppearance {
@@ -65,8 +68,9 @@ Solid {
                 }
               ]
             }
-            Transform {
+            DEF TWO_FRONT Transform {
               translation 0 0.3 -0.3
+              rotation 1 0 0 0.262
               children [
                 Shape {
                   appearance DEF BLUE PBRAppearance {
@@ -77,6 +81,64 @@ Solid {
                   geometry DEF CYLINDER_BASE Cylinder {
                     height 0.6
                     radius 0.02
+                  }
+                }
+              ]
+            }
+            DEF OUT Transform {
+              translation 0.15 0.3 0.149
+              rotation 0.7071067811865475 0 0.7071067811865475 1.5708003061004252
+              children [
+                Shape {
+                  appearance USE BLUE
+                  geometry DEF OUT_CYLINDER Cylinder {
+                    height 0.4
+                    radius 0.02
+                  }
+                }
+              ]
+            }
+            DEF OUT_FRONT Transform {
+              translation -0.15 0.3000000397930553 -0.15
+              rotation 0.7071067811865475 0 0.7071067811865475 1.5708003061004252
+              children [
+                Shape {
+                  appearance USE BLUE
+                  geometry Cylinder {
+                    height 0.4
+                    radius 0.02
+                  }
+                }
+              ]
+            }
+            DEF COUT_1 Transform {
+              translation -0.1468519787567164 0.3000000027659453 0.1505025236085084
+              rotation 0.3527265321748586 0.3527265321748586 -0.866699479058224 4.565413787860441
+              children [
+                Shape {
+                  appearance USE BLUE
+                  geometry USE OUT_CYLINDER
+                }
+              ]
+            }
+            DEF COUT_1FRONT Transform {
+              translation 0.147 0.3 -0.151
+              rotation 0.3527265321748586 0.3527265321748586 -0.866699479058224 4.565413787860441
+              children [
+                Shape {
+                  appearance USE BLUE
+                  geometry USE OUT_CYLINDER
+                }
+              ]
+            }
+            DEF BASE_BOX Transform {
+              translation 0 0.6 0
+              rotation 0 1 0 -0.7854003061004253
+              children [
+                Shape {
+                  appearance USE BLUE
+                  geometry Box {
+                    size 0.4 0.01 0.4
                   }
                 }
               ]
