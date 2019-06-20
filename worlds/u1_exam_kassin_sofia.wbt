@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.035171788779794905 -0.9366313982370106 -0.3485463657974533 3.330063584948404
-  position 0.09186058304386868 1.7823418143460708 -1.2922779155805875
+  orientation 0.07223083041704838 -0.985237546615453 -0.15520851740940758 4.001407789905606
+  position 2.8157065741759415 1.7637552796174003 -3.8790872718563465
 }
 TexturedBackground {
 }
@@ -206,6 +206,7 @@ Solid {
               }
               HingeJoint {
                 jointParameters HingeJointParameters {
+                  axis 0 0 1
                   anchor -0.108 0.85 -0.118
                 }
                 endPoint Solid {
@@ -221,7 +222,7 @@ Solid {
                             DEF ASPA Shape {
                               appearance USE GREEN
                               geometry Box {
-                                size 0.6 0.02 0.06
+                                size 0.4 0.02 0.04
                               }
                             }
                           ]
@@ -229,6 +230,20 @@ Solid {
                         Transform {
                           translation -0.10800000000000001 0.85 -0.118
                           rotation 0.6785983457559442 0.6785983438499072 0.281084636473534 2.5935642397409957
+                          children [
+                            USE ASPA
+                          ]
+                        }
+                        Transform {
+                          translation -0.10800000000000001 0.85 -0.11800000000000002
+                          rotation 0.7071067753985952 -1.058284880732459e-08 -0.7071067869744996 1.570796307615311
+                          children [
+                            USE ASPA
+                          ]
+                        }
+                        Transform {
+                          translation -0.10800000000000001 0.85 -0.11800000000000002
+                          rotation 0.8164965792404933 0.5773502715757332 -8.640859753651725e-09 2.0943950763315007
                           children [
                             USE ASPA
                           ]
