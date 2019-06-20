@@ -1,14 +1,89 @@
 #VRML_SIM R2019a utf8
 WorldInfo {
-  info [
-  ]
 }
 Viewpoint {
-  orientation -0.7 0.7 0.2 0.75
-  position 1.2 1.6 2.3
-
+  orientation -0.029126307243604772 0.991165639452282 0.129392168988313 2.655224558159153
+  position 0.9827153998207935 0.8791481460176379 -2.598242093636871
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
+}
+Floor {
+}
+Solid {
+  children [
+    Group {
+      children [
+        Group {
+          children [
+            Transform {
+              translation 0.3 0.3 0
+              children [
+                Shape {
+                  appearance DEF BLUE PBRAppearance {
+                    baseColor 0.4470588235294118 0.6235294117647059 0.8117647058823529
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry DEF CYLINDER_BASE Cylinder {
+                    height 0.6
+                    radius 0.02
+                  }
+                }
+              ]
+            }
+            Transform {
+              translation -0.3 0.3 0
+              children [
+                Shape {
+                  appearance DEF BLUE PBRAppearance {
+                    baseColor 0.4470588235294118 0.6235294117647059 0.8117647058823529
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry DEF CYLINDER_BASE Cylinder {
+                    height 0.6
+                    radius 0.02
+                  }
+                }
+              ]
+            }
+            Transform {
+              translation 0 0.3 0.3
+              children [
+                Shape {
+                  appearance DEF BLUE PBRAppearance {
+                    baseColor 0.4470588235294118 0.6235294117647059 0.8117647058823529
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry DEF CYLINDER_BASE Cylinder {
+                    height 0.6
+                    radius 0.02
+                  }
+                }
+              ]
+            }
+            Transform {
+              translation 0 0.3 -0.3
+              children [
+                Shape {
+                  appearance DEF BLUE PBRAppearance {
+                    baseColor 0.4470588235294118 0.6235294117647059 0.8117647058823529
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry DEF CYLINDER_BASE Cylinder {
+                    height 0.6
+                    radius 0.02
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
