@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.07223083041704838 -0.985237546615453 -0.15520851740940758 4.001407789905606
-  position 2.8157065741759415 1.7637552796174003 -3.8790872718563465
+  orientation 0.0027202056428465397 -0.9999632927249923 -0.008124880543867934 3.7877095321411764
+  position 1.6446167235632365 0.6879213883301242 -2.6497186229301652
 }
 TexturedBackground {
 }
@@ -23,13 +23,13 @@ Solid {
               children [
                 Shape {
                   appearance DEF BLUE PBRAppearance {
-                    baseColor 0.4470588235294118 0.6235294117647059 0.8117647058823529
+                    baseColor 0.7294117647058823 0.7411764705882353 0.7137254901960784
                     roughness 1
                     metalness 0
                   }
                   geometry DEF CYLINDER_BASE Cylinder {
                     height 0.6
-                    radius 0.02
+                    radius 0.019999999999999997
                   }
                 }
               ]
@@ -39,15 +39,8 @@ Solid {
               rotation 0 0 1 -0.262
               children [
                 Shape {
-                  appearance DEF BLUE PBRAppearance {
-                    baseColor 0.4470588235294118 0.6235294117647059 0.8117647058823529
-                    roughness 1
-                    metalness 0
-                  }
-                  geometry DEF CYLINDER_BASE Cylinder {
-                    height 0.6
-                    radius 0.02
-                  }
+                  appearance USE BLUE
+                  geometry USE CYLINDER_BASE
                 }
               ]
             }
@@ -56,15 +49,8 @@ Solid {
               rotation 1 0 0 -0.262
               children [
                 Shape {
-                  appearance DEF BLUE PBRAppearance {
-                    baseColor 0.4470588235294118 0.6235294117647059 0.8117647058823529
-                    roughness 1
-                    metalness 0
-                  }
-                  geometry DEF CYLINDER_BASE Cylinder {
-                    height 0.6
-                    radius 0.02
-                  }
+                  appearance USE BLUE
+                  geometry USE CYLINDER_BASE
                 }
               ]
             }
@@ -73,15 +59,8 @@ Solid {
               rotation 1 0 0 0.262
               children [
                 Shape {
-                  appearance DEF BLUE PBRAppearance {
-                    baseColor 0.4470588235294118 0.6235294117647059 0.8117647058823529
-                    roughness 1
-                    metalness 0
-                  }
-                  geometry DEF CYLINDER_BASE Cylinder {
-                    height 0.6
-                    radius 0.02
-                  }
+                  appearance USE BLUE
+                  geometry USE CYLINDER_BASE
                 }
               ]
             }
@@ -91,9 +70,9 @@ Solid {
               children [
                 Shape {
                   appearance USE BLUE
-                  geometry DEF OUT_CYLINDER Cylinder {
+                  geometry DEF SUPPORT Cylinder {
                     height 0.4
-                    radius 0.02
+                    radius 0.019999999999999997
                   }
                 }
               ]
@@ -104,10 +83,7 @@ Solid {
               children [
                 Shape {
                   appearance USE BLUE
-                  geometry Cylinder {
-                    height 0.4
-                    radius 0.02
-                  }
+                  geometry USE SUPPORT
                 }
               ]
             }
@@ -117,7 +93,7 @@ Solid {
               children [
                 Shape {
                   appearance USE BLUE
-                  geometry USE OUT_CYLINDER
+                  geometry USE SUPPORT
                 }
               ]
             }
@@ -127,7 +103,7 @@ Solid {
               children [
                 Shape {
                   appearance USE BLUE
-                  geometry USE OUT_CYLINDER
+                  geometry USE SUPPORT
                 }
               ]
             }
