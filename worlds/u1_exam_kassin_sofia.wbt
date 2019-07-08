@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.0027202056428465397 -0.9999632927249923 -0.008124880543867934 3.7877095321411764
-  position 1.6446167235632365 0.6879213883301242 -2.6497186229301652
+  orientation 0.621724917084609 0.7818262767933761 0.046965949277569925 6.090539965048576
+  position -0.01100224704418765 0.9366360287790159 1.1323103097457985
 }
 TexturedBackground {
 }
@@ -12,6 +12,7 @@ TexturedBackgroundLight {
 Floor {
 }
 Solid {
+  rotation 0 1 0 -0.7853996938995746
   children [
     Group {
       children [
@@ -121,125 +122,117 @@ Solid {
             }
           ]
         }
-        Group {
+      ]
+    }
+    Group {
+      children [
+        Solid {
+          translation 0 0.7 0
           children [
-            Solid {
-              translation 0 0.7 0
+            Shape {
+              appearance DEF GREEN PBRAppearance {
+                baseColor 0.5411764705882353 0.8862745098039215 0.20392156862745098
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.2
+                radius 0.05
+              }
+            }
+            Transform {
+              translation 0 0.15 0
+              rotation 0 1 0 -0.7854003061004253
               children [
                 Shape {
-                  appearance DEF GREEN PBRAppearance {
-                    baseColor 0.5411764705882353 0.8862745098039215 0.20392156862745098
-                    roughness 1
-                    metalness 0
+                  appearance USE GREEN
+                  geometry Box {
+                    size 0.5 0.1 0.1
                   }
-                  geometry Cylinder {
-                    height 0.2
-                    radius 0.03
-                  }
-                }
-                Transform {
-                  translation 0 0.15 0
-                  rotation 0 1 0 -0.7854003061004253
-                  children [
-                    Shape {
-                      appearance USE GREEN
-                      geometry Box {
-                        size 0.3 0.1 0.1
-                      }
-                    }
-                  ]
                 }
               ]
             }
           ]
+          name "solid(1)"
         }
-        HingeJoint {
-          jointParameters HingeJointParameters {
-            axis 0 1 0
-            anchor 0.256 0.85 0.24
-            minStop -0.7854
-            maxStop 0.7854
-            dampingConstant 2
+      ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor -0.178 0.85 -0.178
+        minStop -0.7854
+        maxStop 0.7854
+        springConstant 0.06667
+      }
+      endPoint Solid {
+        translation -0.25999947425883857 0.8499988069690593 -0.2600005764877898
+        rotation -6.814484893366915e-08 -0.999999999999984 1.648318094316829e-07 0.785406403126181
+        children [
+          Shape {
+            appearance USE GREEN
+            geometry DEF ASPA Box {
+              size 0.25 0.05 0.02
+            }
           }
-          endPoint Solid {
+        ]
+        boundingObject USE ASPA
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 1 0 1
+        anchor 0.178 0.85 0.178
+      }
+      endPoint Solid {
+        translation 0.18 0.85 0.18
+        rotation 0 1 0 0.7854000000000001
+        children [
+          Group {
             children [
-              Group {
+              Shape {
+                appearance USE GREEN
+                geometry DEF HELIX Box {
+                  size 0.01 0.35 0.01
+                }
+              }
+              Transform {
+                rotation 0 0 1 0.7854
                 children [
-                  Transform {
-                    translation 0.256 0.85 0.24
-                    rotation -0.29912070340549424 0.6747320967592257 -0.6747320967592257 3.6896201326638907
-                    children [
-                      Shape {
-                        appearance USE GREEN
-                        geometry Cylinder {
-                          height 0.4
-                          radius 0.019999999999999997
-                        }
-                      }
-                    ]
+                  Shape {
+                    appearance USE GREEN
+                    geometry USE HELIX
                   }
                 ]
               }
-              HingeJoint {
-                jointParameters HingeJointParameters {
-                  axis 0 0 1
-                  anchor -0.108 0.85 -0.118
-                  springConstant 0.2
-                  dampingConstant 1
-                }
-                endPoint Solid {
-                  translation -8.240945559429003e-07 -1.609746402342349e-05 -9.083233308559979e-07
-                  rotation 0.7393790489102683 -0.01048482900962471 -0.6732077616851916 2.5101270305212674e-06
-                  children [
-                    Group {
-                      children [
-                        Transform {
-                          translation -0.10772077954769858 0.8500000017566348 -0.11788157969516588
-                          rotation 0.8628562117939189 -0.35740674409112405 -0.3574067389499388 4.565413778166129
-                          children [
-                            DEF ASPA Shape {
-                              appearance USE GREEN
-                              geometry Box {
-                                size 0.4 0.02 0.04
-                              }
-                            }
-                          ]
-                        }
-                        Transform {
-                          translation -0.10800000000000001 0.85 -0.118
-                          rotation 0.6785983457559442 0.6785983438499072 0.281084636473534 2.5935642397409957
-                          children [
-                            USE ASPA
-                          ]
-                        }
-                        Transform {
-                          translation -0.10800000000000001 0.85 -0.11800000000000002
-                          rotation 0.7071067753985952 -1.058284880732459e-08 -0.7071067869744996 1.570796307615311
-                          children [
-                            USE ASPA
-                          ]
-                        }
-                        Transform {
-                          translation -0.10800000000000001 0.85 -0.11800000000000002
-                          rotation 0.8164965792404933 0.5773502715757332 -8.640859753651725e-09 2.0943950763315007
-                          children [
-                            USE ASPA
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                  physics Physics {
+              Transform {
+                rotation 0 0 1 -0.7854
+                children [
+                  Shape {
+                    appearance USE GREEN
+                    geometry USE HELIX
                   }
-                }
+                ]
+              }
+              Transform {
+                rotation 0 0 1 1.57
+                children [
+                  Shape {
+                    appearance USE GREEN
+                    geometry USE HELIX
+                  }
+                ]
               }
             ]
-            name "solid(1)"
-            physics Physics {
-            }
           }
+        ]
+        name "solid(2)"
+        physics Physics {
+          density 500
         }
-      ]
+      }
     }
   ]
 }
