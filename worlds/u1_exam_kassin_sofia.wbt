@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.621724917084609 0.7818262767933761 0.046965949277569925 6.090539965048576
-  position -0.01100224704418765 0.9366360287790159 1.1323103097457985
+  orientation 0.7806526829932567 0.5806998748728025 0.23101741029225803 6.187836773011079
+  position 0.06500345535856002 0.9108336174006669 2.04377220777833
 }
 TexturedBackground {
 }
@@ -14,111 +14,107 @@ Floor {
 Solid {
   rotation 0 1 0 -0.7853996938995746
   children [
-    Group {
+    DEF BASE Group {
       children [
-        Group {
+        DEF ONE Transform {
+          translation 0.3 0.3 0
+          rotation 0 0 1 0.2617996938995747
           children [
-            DEF ONE Transform {
-              translation 0.3 0.3 0
-              rotation 0 0 1 0.2617996938995747
-              children [
-                Shape {
-                  appearance DEF BLUE PBRAppearance {
-                    baseColor 0.7294117647058823 0.7411764705882353 0.7137254901960784
-                    roughness 1
-                    metalness 0
-                  }
-                  geometry DEF CYLINDER_BASE Cylinder {
-                    height 0.6
-                    radius 0.019999999999999997
-                  }
-                }
-              ]
+            Shape {
+              appearance DEF BLUE PBRAppearance {
+                baseColor 0.4470588235294118 0.6235294117647059 0.8117647058823529
+                roughness 1
+                metalness 0
+              }
+              geometry DEF CYLINDER_BASE Cylinder {
+                height 0.6
+                radius 0.019999999999999997
+              }
             }
-            DEF ONE_FRONT Transform {
-              translation -0.3 0.3 0
-              rotation 0 0 1 -0.262
-              children [
-                Shape {
-                  appearance USE BLUE
-                  geometry USE CYLINDER_BASE
-                }
-              ]
+          ]
+        }
+        DEF ONE_FRONT Transform {
+          translation -0.3 0.3 0
+          rotation 0 0 1 -0.262
+          children [
+            Shape {
+              appearance USE BLUE
+              geometry USE CYLINDER_BASE
             }
-            DEF TWO Transform {
-              translation 0 0.3 0.3
-              rotation 1 0 0 -0.262
-              children [
-                Shape {
-                  appearance USE BLUE
-                  geometry USE CYLINDER_BASE
-                }
-              ]
+          ]
+        }
+        DEF TWO Transform {
+          translation 0 0.3 0.3
+          rotation 1 0 0 -0.262
+          children [
+            Shape {
+              appearance USE BLUE
+              geometry USE CYLINDER_BASE
             }
-            DEF TWO_FRONT Transform {
-              translation 0 0.3 -0.3
-              rotation 1 0 0 0.262
-              children [
-                Shape {
-                  appearance USE BLUE
-                  geometry USE CYLINDER_BASE
-                }
-              ]
+          ]
+        }
+        DEF TWO_FRONT Transform {
+          translation 0 0.3 -0.3
+          rotation 1 0 0 0.262
+          children [
+            Shape {
+              appearance USE BLUE
+              geometry USE CYLINDER_BASE
             }
-            DEF OUT Transform {
-              translation 0.15 0.3 0.149
-              rotation 0.7071067811865475 0 0.7071067811865475 1.5708003061004252
-              children [
-                Shape {
-                  appearance USE BLUE
-                  geometry DEF SUPPORT Cylinder {
-                    height 0.4
-                    radius 0.019999999999999997
-                  }
-                }
-              ]
+          ]
+        }
+        DEF OUT Transform {
+          translation 0.15 0.3 0.149
+          rotation 0.7071067811865475 0 0.7071067811865475 1.5708003061004252
+          children [
+            Shape {
+              appearance USE BLUE
+              geometry DEF SUPPORT Cylinder {
+                height 0.4
+                radius 0.019999999999999997
+              }
             }
-            DEF OUT_FRONT Transform {
-              translation -0.15 0.3000000397930553 -0.15
-              rotation 0.7071067811865475 0 0.7071067811865475 1.5708003061004252
-              children [
-                Shape {
-                  appearance USE BLUE
-                  geometry USE SUPPORT
-                }
-              ]
+          ]
+        }
+        DEF OUT_FRONT Transform {
+          translation -0.15 0.3000000397930553 -0.15
+          rotation 0.7071067811865475 0 0.7071067811865475 1.5708003061004252
+          children [
+            Shape {
+              appearance USE BLUE
+              geometry USE SUPPORT
             }
-            DEF COUT_1 Transform {
-              translation -0.1468519787567164 0.3000000027659453 0.1505025236085084
-              rotation 0.3527265321748586 0.3527265321748586 -0.866699479058224 4.565413787860441
-              children [
-                Shape {
-                  appearance USE BLUE
-                  geometry USE SUPPORT
-                }
-              ]
+          ]
+        }
+        DEF COUT_1 Transform {
+          translation -0.1468519787567164 0.3000000027659453 0.1505025236085084
+          rotation 0.3527265321748586 0.3527265321748586 -0.866699479058224 4.565413787860441
+          children [
+            Shape {
+              appearance USE BLUE
+              geometry USE SUPPORT
             }
-            DEF COUT_1FRONT Transform {
-              translation 0.147 0.3 -0.151
-              rotation 0.3527265321748586 0.3527265321748586 -0.866699479058224 4.565413787860441
-              children [
-                Shape {
-                  appearance USE BLUE
-                  geometry USE SUPPORT
-                }
-              ]
+          ]
+        }
+        DEF COUT_1FRONT Transform {
+          translation 0.147 0.3 -0.151
+          rotation 0.3527265321748586 0.3527265321748586 -0.866699479058224 4.565413787860441
+          children [
+            Shape {
+              appearance USE BLUE
+              geometry USE SUPPORT
             }
-            DEF BASE_BOX Transform {
-              translation 0 0.6 0
-              rotation 0 1 0 -0.7854003061004253
-              children [
-                Shape {
-                  appearance USE BLUE
-                  geometry Box {
-                    size 0.4 0.01 0.4
-                  }
-                }
-              ]
+          ]
+        }
+        DEF BASE_BOX Transform {
+          translation 0 0.6 0
+          rotation 0 1 0 -0.7854003061004253
+          children [
+            Shape {
+              appearance USE BLUE
+              geometry Box {
+                size 0.4 0.01 0.4
+              }
             }
           ]
         }
@@ -154,6 +150,8 @@ Solid {
             }
           ]
           name "solid(1)"
+          physics Physics {
+          }
         }
       ]
     }
@@ -190,7 +188,7 @@ Solid {
         translation 0.18 0.85 0.18
         rotation 0 1 0 0.7854000000000001
         children [
-          Group {
+          DEF OLO Group {
             children [
               Shape {
                 appearance USE GREEN
@@ -229,10 +227,14 @@ Solid {
           }
         ]
         name "solid(2)"
+        boundingObject USE OLO
         physics Physics {
           density 500
         }
       }
     }
   ]
+  boundingObject USE BASE
+  physics Physics {
+  }
 }
