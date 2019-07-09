@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.7806526829932567 0.5806998748728025 0.23101741029225803 6.187836773011079
-  position 0.06500345535856002 0.9108336174006669 2.04377220777833
+  orientation 0.21824755649607086 0.9648372436757648 0.1464824129363224 5.221225527453967
+  position -1.27580256386074 1.1536061724474829 1.1612159889220075
 }
 TexturedBackground {
 }
@@ -118,16 +118,12 @@ Solid {
             }
           ]
         }
-      ]
-    }
-    Group {
-      children [
-        Solid {
+        Transform {
           translation 0 0.7 0
           children [
             Shape {
               appearance DEF GREEN PBRAppearance {
-                baseColor 0.5411764705882353 0.8862745098039215 0.20392156862745098
+                baseColor 0.6784313725490196 0.4980392156862745 0.6588235294117647
                 roughness 1
                 metalness 0
               }
@@ -136,22 +132,19 @@ Solid {
                 radius 0.05
               }
             }
-            Transform {
-              translation 0 0.15 0
-              rotation 0 1 0 -0.7854003061004253
-              children [
-                Shape {
-                  appearance USE GREEN
-                  geometry Box {
-                    size 0.5 0.1 0.1
-                  }
-                }
-              ]
+          ]
+        }
+        Transform {
+          translation 0 0.85 0
+          rotation 0 1 0 -0.7854003061004253
+          children [
+            Shape {
+              appearance USE GREEN
+              geometry Box {
+                size 0.5 0.1 0.1
+              }
             }
           ]
-          name "solid(1)"
-          physics Physics {
-          }
         }
       ]
     }
@@ -220,6 +213,100 @@ Solid {
                   Shape {
                     appearance USE GREEN
                     geometry USE HELIX
+                  }
+                ]
+              }
+              DEF ONE Transform {
+                translation 0 0.205 0
+                children [
+                  Shape {
+                    appearance USE GREEN
+                    geometry Box {
+                      size 0.04 0.06 0.01
+                    }
+                  }
+                ]
+              }
+              DEF ONED Transform {
+                translation 0 -0.205 0
+                children [
+                  Shape {
+                    appearance USE GREEN
+                    geometry Box {
+                      size 0.04 0.06 0.01
+                    }
+                  }
+                ]
+              }
+              DEF TWO Transform {
+                translation 0.1453 0.1445 0
+                rotation 0 0 1 5.497787127
+                children [
+                  Shape {
+                    appearance USE GREEN
+                    geometry Box {
+                      size 0.04 0.06 0.01
+                    }
+                  }
+                ]
+              }
+              DEF TWOD Transform {
+                translation -0.1446137851518576 -0.14541377542111122 0
+                rotation 0 0 1 5.497787127
+                children [
+                  Shape {
+                    appearance USE GREEN
+                    geometry Box {
+                      size 0.04 0.06 0.01
+                    }
+                  }
+                ]
+              }
+              DEF THREE Transform {
+                translation 0.205 0.0025 0
+                rotation 0 0 -1 1.5707963603591741
+                children [
+                  Shape {
+                    appearance USE GREEN
+                    geometry Box {
+                      size 0.04 0.06 0.01
+                    }
+                  }
+                ]
+              }
+              DEF THREED Transform {
+                translation -0.205 0.0025 0
+                rotation 0 0 -1 1.5707963603591741
+                children [
+                  Shape {
+                    appearance USE GREEN
+                    geometry Box {
+                      size 0.04 0.06 0.01
+                    }
+                  }
+                ]
+              }
+              DEF FOUR Transform {
+                translation 0.14471 -0.145171 0
+                rotation 0 0 -1 2.356194559718348
+                children [
+                  Shape {
+                    appearance USE GREEN
+                    geometry Box {
+                      size 0.04 0.06 0.01
+                    }
+                  }
+                ]
+              }
+              DEF FOURD Transform {
+                translation -0.14520376012993738 0.14474280044303017 0
+                rotation 0 0 -1 2.356194559718348
+                children [
+                  Shape {
+                    appearance USE GREEN
+                    geometry Box {
+                      size 0.04 0.06 0.01
+                    }
                   }
                 ]
               }
